@@ -21,6 +21,8 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SRC_FILES:= \
 	libion.cpp
 

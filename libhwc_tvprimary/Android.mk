@@ -67,6 +67,8 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/include \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcmodule
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SRC_FILES := ExynosHWC.cpp
 
 LOCAL_MODULE := hwcomposer.$(TARGET_BOARD_PLATFORM)

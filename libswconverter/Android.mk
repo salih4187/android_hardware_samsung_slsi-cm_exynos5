@@ -13,6 +13,8 @@ LOCAL_SRC_FILES := \
 	csc_ARGB8888_to_YUV420SP_NEON.s \
 	csc_ARGB8888_to_ABGR8888.s
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/openmax/include/khronos \
 	$(LOCAL_PATH)/../include

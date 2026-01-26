@@ -25,6 +25,8 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/include \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libexynosutils
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SRC_FILES := libscaler.cpp
 
 LOCAL_MODULE := libexynosscaler

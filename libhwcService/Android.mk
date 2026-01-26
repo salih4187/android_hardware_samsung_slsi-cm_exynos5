@@ -33,6 +33,8 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/include \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcmodule
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 ifeq ($(BOARD_HDMI_INCAPABLE), true)
 LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/libhdmi_dummy
 else
