@@ -42,7 +42,7 @@ int CGscaler::m_gsc_output_create(void *handle, int dev_num, int out_mode)
     char devname[32];
     unsigned int cap;
     int         i;
-    int         fd = 0;
+    int __unused         fd = 0;
     CGscaler* gsc = GetGscaler(handle);
     if (gsc == NULL) {
         ALOGE("%s::handle == NULL() fail", __func__);
@@ -211,7 +211,7 @@ int CGscaler::m_gsc_out_stop(void *handle)
 {
     Exynos_gsc_In();
 
-    struct v4l2_requestbuffers reqbuf;
+    struct v4l2_requestbuffers __unused reqbuf;
     CGscaler* gsc = GetGscaler(handle);
     if (gsc == NULL) {
         ALOGE("%s::handle == NULL() fail", __func__);
@@ -699,9 +699,9 @@ done:
 
 bool CGscaler::m_gsc_check_src_size(
     unsigned int *w,      unsigned int *h,
-    unsigned int *crop_x, unsigned int *crop_y,
+    unsigned int * __unused crop_x, unsigned int * __unused crop_y,
     unsigned int *crop_w, unsigned int *crop_h,
-    int v4l2_colorformat)
+    int __unused v4l2_colorformat)
 {
     if (*w < GSC_MIN_SRC_W_SIZE || *h < GSC_MIN_SRC_H_SIZE) {
         ALOGE("%s::too small size (w : %d < %d) (h : %d < %d)",
@@ -720,10 +720,10 @@ bool CGscaler::m_gsc_check_src_size(
 
 bool CGscaler::m_gsc_check_dst_size(
     unsigned int *w,      unsigned int *h,
-    unsigned int *crop_x, unsigned int *crop_y,
+    unsigned int * __unused crop_x, unsigned int * __unused crop_y,
     unsigned int *crop_w, unsigned int *crop_h,
-    int v4l2_colorformat,
-    int rotation)
+    int __unused v4l2_colorformat,
+    int __unused rotation)
 {
     if (*w < GSC_MIN_DST_W_SIZE || *h < GSC_MIN_DST_H_SIZE) {
         ALOGE("%s::too small size (w : %d < %d) (h : %d < %d)",
@@ -1096,14 +1096,14 @@ int CGscaler::m_gsc_out_config(void *handle,
     struct v4l2_requestbuffers reqbuf;
     struct v4l2_subdev_format sd_fmt;
     struct v4l2_subdev_crop   sd_crop;
-    int i;
+    int __unused i;
     unsigned int rotate;
     unsigned int hflip;
     unsigned int vflip;
-    unsigned int plane_size[NUM_OF_GSC_PLANES];
+    unsigned int __unused plane_size[NUM_OF_GSC_PLANES];
     bool rgb;
 
-    struct v4l2_rect dst_rect;
+    struct v4l2_rect __unused dst_rect;
     int32_t      src_color_space;
     int32_t      dst_color_space;
     int32_t      src_planes;

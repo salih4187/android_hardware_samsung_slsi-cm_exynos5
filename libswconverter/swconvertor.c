@@ -31,12 +31,13 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "swconverter.h"
+#include <string.h>
 
 /* 2D Configurable tiled memory access (TM)
  * Return the linear address from tiled position (x, y) */
 unsigned int Tile2D_To_Linear(
     unsigned int width,
-    unsigned int height,
+    unsigned int __unused height,
     unsigned int xpos,
     unsigned int ypos,
     int crFlag)
@@ -405,10 +406,10 @@ void csc_tiled_to_linear_uv_deinterleave(
  *
  */
 void csc_linear_to_tiled_y(
-    unsigned char *y_dst,
-    unsigned char *y_src,
-    unsigned int width,
-    unsigned int height)
+    unsigned char * __unused y_dst,
+    unsigned char * __unused y_src,
+    unsigned int __unused width,
+    unsigned int __unused height)
 {
 
 }
@@ -435,11 +436,11 @@ void csc_linear_to_tiled_y(
  *
  */
 void csc_linear_to_tiled_uv(
-    unsigned char *uv_dst,
-    unsigned char *u_src,
-    unsigned char *v_src,
-    unsigned int width,
-    unsigned int height)
+    unsigned char * __unused uv_dst,
+    unsigned char * __unused u_src,
+    unsigned char * __unused v_src,
+    unsigned int __unused width,
+    unsigned int __unused height)
 {
 
 }
@@ -523,8 +524,8 @@ void csc_RGB565_to_YUV420P(
     unsigned int R, G, B;
     unsigned int Y, U, V;
 
-    unsigned int offset1 = width * height;
-    unsigned int offset2 = width/2 * height/2;
+    unsigned int __unused offset1 = width * height;
+    unsigned int __unused offset2 = width/2 * height/2;
 
     unsigned short int *pSrc = (unsigned short int *)rgb_src;
 
@@ -597,7 +598,7 @@ void csc_RGB565_to_YUV420SP(
     unsigned int R, G, B;
     unsigned int Y, U, V;
 
-    unsigned int offset = width * height;
+    unsigned int __unused offset = width * height;
 
     unsigned short int *pSrc = (unsigned short int *)rgb_src;
 
@@ -674,8 +675,8 @@ void csc_ARGB8888_to_YUV420P(
     unsigned int R, G, B;
     unsigned int Y, U, V;
 
-    unsigned int offset1 = width * height;
-    unsigned int offset2 = width/2 * height/2;
+    unsigned int __unused offset1 = width * height;
+    unsigned int __unused offset2 = width/2 * height/2;
 
     unsigned int *pSrc = (unsigned int *)rgb_src;
 
@@ -748,7 +749,7 @@ void csc_ARGB8888_to_YUV420SP(
     unsigned int R, G, B;
     unsigned int Y, U, V;
 
-    unsigned int offset = width * height;
+    unsigned int __unused offset = width * height;
 
     unsigned int *pSrc = (unsigned int *)rgb_src;
 
